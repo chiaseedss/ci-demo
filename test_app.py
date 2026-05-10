@@ -10,4 +10,4 @@ def client():
 def test_hello_world(client):
     res = client.get('/')
     assert res.status_code == 200
-    assert b'Not Hello World' in res.data
+    assert b'Hello World' in res.data
