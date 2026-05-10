@@ -47,6 +47,7 @@ jobs:
             username: ${{ secrets.SSH_USER }}
             key: ${{ secrets.SSH_KEY }}
             script: |
+              export PATH=$PATH:~/.local/bin
               if [ ! -d ~/flask-app ]; then
                 git clone https://github.com/chiaseedss/ci-demo.git ~/flask-app
               fi
